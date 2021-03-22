@@ -10,7 +10,7 @@ const switchColour = () => {
   id = setInterval(() => {
     let el = randomIntegerFromInterval(0, colors.length - 1);
     refs.body.style.backgroundColor = colors[el];
-    console.log('switching');
+    // console.log('switching');
   }, 1000);
 
   refs.start.disabled = true;
@@ -18,7 +18,7 @@ const switchColour = () => {
 const stopSwitch = () => {
   clearInterval(id);
   refs.start.disabled = false;
-  console.log('stopped switching');
+  // console.log('stopped switching');
 };
 refs.start.addEventListener('click', switchColour)
 refs.stop.addEventListener('click', stopSwitch)
